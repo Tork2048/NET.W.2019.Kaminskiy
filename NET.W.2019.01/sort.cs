@@ -246,7 +246,7 @@ namespace Sort_project
                     Bubble_Sort(Array);
                     break;
             }
-            Quick_Sort(ref Array, 0, Array.Length-1);
+            //Quick_Sort(ref Array, 0, Array.Length-1);
             return Array;
         }
 
