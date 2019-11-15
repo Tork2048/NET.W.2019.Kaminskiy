@@ -57,7 +57,7 @@ namespace Sort_project
          
         static private void Merge_Sort(ref int[] array, int begin, int end)
         {
-            if (begin <= end)
+            if (end<=begin)
             {
                 return;   //Array can no longer be devided - recursion exit point.
             }
@@ -66,12 +66,12 @@ namespace Sort_project
             Merge_Sort(ref array, begin, mid);  //recursion entry point for the first half of array,
             Merge_Sort(ref array, mid + 1, end);//recusrion entry point for the second half of array.
 
-            int[] buffer = new int[end + 1];
-            for(int k=0;k<=end;k++)
+            int[] buffer = new int[array.Length];
+            for(int k=begin;k<=end;k++)
             {
                 buffer[k] = array[k];   //buffer array that contains merged halves (unsorted). Will be used as a source material.
             }
-            int i = 0; //first half index
+            int i = begin; //first half index
             int j = mid+1; //second half index
             for(int k=begin;k<=end;k++)
             {
