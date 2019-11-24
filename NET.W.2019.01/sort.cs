@@ -14,34 +14,25 @@ namespace Sort_project
             int[] Array = Sort_Machine.Array_Randomizer(11, -100, 100);
             Console.WriteLine("Source array:");
             Sort_Machine.Display(Array);
-                        
             int[] Result = Sort_Machine.Sort(Array, Sort_Machine.Method.Quick);
             Console.WriteLine("Quick sort method result:");
-            Sort_Machine.Display(Result);
-                        
+            Sort_Machine.Display(Result);            
             Result = Sort_Machine.Sort(Array, Sort_Machine.Method.Merge);
             Console.WriteLine("Merge sort method result:");
             Sort_Machine.Display(Result);
             Console.WriteLine();
-
             Sort_Machine.Self_Test(100000, 101, Sort_Machine.Method.Quick);
             Sort_Machine.Self_Test(100000, 101, Sort_Machine.Method.Merge);
-
             Console.WriteLine("Press any key to quit");
-
-
             Console.ReadKey();
         }
     }
-
-    
     /// <summary>
     /// Static class. Contains implementations of Quick, Merge and Bubble sort methods. Also can display array on console.
     /// </summary>
 
     static class Sort_Machine
     {
-        
         /// <summary>
         /// Merge sort method implementation. Private, not meant for direct use.
         /// </summary>
@@ -54,38 +45,35 @@ namespace Sort_project
         /// <param name="end">
         /// Defines the last element of array that will be sorted.
         /// </param>
-         
-        static private void Merge_Sort(ref int[] array, int begin, int end)
+        static private void Merge_Sort(int[] array, int begin, int end)
         {
-            if (end<=begin)
+            if (end <= begin)
             {
                 return;   //Array can no longer be devided - recursion exit point.
             }
-
             int mid = (begin + end) / 2;  //defines array devision point (first half last element index).
-            Merge_Sort(ref array, begin, mid);  //recursion entry point for the first half of array,
-            Merge_Sort(ref array, mid + 1, end);//recusrion entry point for the second half of array.
-
+            Merge_Sort(array, begin, mid);  //recursion entry point for the first half of array,
+            Merge_Sort(array, mid + 1, end);//recusrion entry point for the second half of array.
             int[] buffer = new int[array.Length];
-            for(int k=begin;k<=end;k++)
+            for (int k = begin; k <= end; k++)
             {
                 buffer[k] = array[k];   //buffer array that contains merged halves (unsorted). Will be used as a source material.
             }
             int i = begin; //first half index
-            int j = mid+1; //second half index
-            for(int k=begin;k<=end;k++)
+            int j = mid + 1; //second half index
+            for (int k = begin; k <= end; k++)
             {
-                if(i>mid)
+                if (i > mid)
                 {
                     array[k] = buffer[j];  //if we run out elements in first half
                     j++;
                 }
-                else if(j>end)
+                else if (j > end)
                 {
                     array[k] = buffer[i]; //if we run out of elements in second half
                     i++;
                 }
-                else if(buffer[i]<buffer[j]) //Sort process
+                else if (buffer[i] < buffer[j]) //Sort process
                 {
                     array[k] = buffer[i];
                     i++;
@@ -94,8 +82,8 @@ namespace Sort_project
                 {
                     array[k] = buffer[j];
                     j++;
-                }                    
-            }                
+                }
+            }
         }
 
         /// <summary>
@@ -111,21 +99,20 @@ namespace Sort_project
         /// Defines the last element of array that will be sorted.
         /// </param>
 
-        static private void Quick_Sort(ref int[] Array, int begin, int end)
+        static private void Quick_Sort(int[] Array, int begin, int end)
         {
-            int p_index = Piv_Index(Array, begin, end); //getting index of pivot element.            
+            //int p_index = Piv_Index(Array, begin, end); //getting index of pivot element. 
+            int p_index = (begin + end) / 2;
             int piv = Array[p_index];
             //pivot element is placed in the center of array
             int temp = Array[(begin + end) / 2];
             Array[(begin + end) / 2] = piv;
             Array[p_index] = temp;
-
             int l = begin; //left cursor
-            int r = end;   //right cursors
-
+            int r = end;   //right cursor
             //cursors will move towards each other swaping elements that don't belong (elements lesser than pivot should be on the left, greater on the right)
             while (l < r)
-            {               
+            {
                 while (Array[l] < piv)
                 {
                     l++;
@@ -143,18 +130,17 @@ namespace Sort_project
             }
             if (begin < r)
             {
-                Quick_Sort(ref Array, begin, r);   //recursion entry point for left part
+                Quick_Sort(Array, begin, r);   //recursion entry point for left part
             }
 
             if (end > l)
             {
-                Quick_Sort(ref Array, l, end);     //recursion entry point for right part
+                Quick_Sort(Array, l, end);     //recursion entry point for right part
             }
         }
-
-
         /// <summary>
         /// Designed to search for pivot element that is equilly distant from min and max elements in the array.
+        /// Proves to be non-effective method. Mid element of the array will be used instead.
         /// </summary>
         /// <param name="Array">
         /// Target array
@@ -175,10 +161,8 @@ namespace Sort_project
                 Console.WriteLine("Array is null");
                 return 0;
             }
-
             int max = int.MinValue;
             int min = int.MaxValue;
-            
             //first cycle searches for min and max elements in the array
             for (int i = begin; i <= end; i++)
             {
@@ -192,8 +176,7 @@ namespace Sort_project
                 }
             }
             int min_dif = int.MaxValue;
-            int p_index=0;
-
+            int p_index = 0;
             //second cycle searches for the most equilly distant element from min and max
             for (int i = begin; i <= end; i++)
             {
@@ -206,13 +189,10 @@ namespace Sort_project
             }
             return p_index;
         }
-
         /// <summary>
         /// Will be used as an option param for Sort method
         /// </summary>
-        public enum Method {Quick, Merge, Bubble};
-
-
+        public enum Method { Quick, Merge, Bubble };
         /// <summary>
         /// Main sort method that agregates all sort methods
         /// </summary>
@@ -225,22 +205,22 @@ namespace Sort_project
         /// <returns>
         /// Sorted array
         /// </returns>
-        public static int[] Sort(int[] Array, Method method)
-        {            
-            if(Array==null)
+        public static int[] Sort(int[] SourceArray, Method method)
+        {
+            int[] Array = new int[SourceArray.Length];
+            if (SourceArray == null)
             {
                 Console.WriteLine("Array is null");
                 return null;
             }
-
-
-            switch(method)
+            SourceArray.CopyTo(Array, 0);            
+            switch (method)
             {
                 case Method.Quick:
-                    Quick_Sort(ref Array, 0, Array.Length - 1);
+                    Quick_Sort(Array, 0, Array.Length - 1);
                     break;
                 case Method.Merge:
-                    Merge_Sort(ref Array, 0, Array.Length - 1);
+                    Merge_Sort(Array, 0, Array.Length - 1);
                     break;
                 case Method.Bubble:
                     Bubble_Sort(Array);
@@ -249,10 +229,6 @@ namespace Sort_project
             //Quick_Sort(ref Array, 0, Array.Length-1);
             return Array;
         }
-
-        
-
-
         /// <summary>
         /// Bubble sort method. Nothing fancy but reliable. Will be used as a reference for testing purposes.
         /// </summary>
@@ -264,12 +240,11 @@ namespace Sort_project
         /// </returns>
         private static int[] Bubble_Sort(int[] Array)
         {
-           
-            for(int i=0;i<Array.Length-1;i++)
+            for (int i = 0; i < Array.Length - 1; i++)
             {
-                for(int j=i+1;j<Array.Length;j++)
+                for (int j = i + 1; j < Array.Length; j++)
                 {
-                    if(Array[i]>Array[j])
+                    if (Array[i] > Array[j])
                     {
                         int temp = Array[i];
                         Array[i] = Array[j];
@@ -277,11 +252,8 @@ namespace Sort_project
                     }
                 }
             }
-
             return Array;
         }
-
-
         /// <summary>
         /// Outputs elements of any array of integers to console
         /// </summary>
@@ -290,19 +262,18 @@ namespace Sort_project
         /// </param>
         public static void Display(int[] Array)
         {
-            if(Array == null)
+            if (Array == null)
             {
                 Console.WriteLine("Array is null");
                 return;
             }
 
-            foreach(int a in Array)
+            foreach (int a in Array)
             {
                 Console.Write($"{a} ");
             }
             Console.WriteLine();
         }
-
         /// <summary>
         /// Self test method. Tests Sort methods on randomly generated arrays and compares results with reference sort method (Bubble)
         /// </summary>
@@ -323,7 +294,7 @@ namespace Sort_project
             {
                 int[] Array = Array_Randomizer(array_capacity, int.MinValue, int.MaxValue);
                 int[] bubble = Sort(Array, Method.Bubble);
-                int[] tested=null;                
+                int[] tested = null;
                 switch (method)
                 {
                     case Method.Quick:
@@ -335,20 +306,19 @@ namespace Sort_project
                     case Method.Bubble:
                         tested = Sort(Array, Method.Bubble);
                         break;
-
-                }                                
-                if(tested.GetHashCode() == bubble.GetHashCode())  
+                }
+                if (tested.GetHashCode() == bubble.GetHashCode())
                 {
                     bool equil = true;
-                    for(int i=0;i<array_capacity;i++)
+                    for (int i = 0; i < array_capacity; i++)
                     {
-                        if(tested[i]!=bubble[i])
+                        if (tested[i] != bubble[i])
                         {
                             equil = false;
                             break;
                         }
                     }
-                    if(equil)
+                    if (equil)
                     {
                         success++;
                     }
@@ -357,7 +327,6 @@ namespace Sort_project
             }
             Console.WriteLine($"Tested Method - {method.ToString()}, Tests - {test_amount}, successful - {success}");
         }
-
         /// <summary>
         /// Array generator (random)
         /// </summary>
@@ -384,5 +353,4 @@ namespace Sort_project
             return array;
         }
     }
-
 }
