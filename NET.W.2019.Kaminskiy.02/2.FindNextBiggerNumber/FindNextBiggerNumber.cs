@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,14 +11,7 @@ namespace FindNumber
     {
         static void Main(string[] args)
         {
-            int n = 214800078;
-            //int[] array = Extract_digits(n);
-            //foreach (var x in array)
-            //{
-            //    Console.Write($"{x} ");
-            //}
-            //Console.WriteLine();
-
+            int n = 232743422;           
             Console.WriteLine($"Number - {n}");
             var watch = new Stopwatch();
             watch.Start();   //stopwatch to find out runtime;
@@ -26,10 +19,8 @@ namespace FindNumber
             watch.Stop();
             Console.WriteLine($"Nearest greater number is {result}");
             Console.WriteLine($"Calculation time - {watch.ElapsedMilliseconds} ms");
-
             Console.ReadLine();
         }
-
         /// <summary>
         /// Simple method that turns number into array of its digits
         /// </summary>
@@ -80,43 +71,31 @@ namespace FindNumber
                 number *= -1;
                 Console.WriteLine("Negative numbers are not allowed. Method will work with absolute value {0}", number);
             }
-
             int[] array = Extract_digits(number);
-
             if (array.Length == 1)
             {
                 return -1;
-            }
-
-            int[] index_array = new int[array.Length];
-            for (int i = 0; i < array.Length; i++)  //array of indexes in asc order.
-            {
-                index_array[i] = i;
-            }
-
-            int dif = int.MaxValue;
+            }                        
             int result = -1;
-            while (Generate_set(ref index_array))  //first permuation is equil to original number - not required.
+            while (Generate_set(array))  //turns array into next permutation in lexicographic order which is what we need (nearest greater number)
             {
-                if (array[index_array[0]] == 0) //first digit cannot be zero
+                if (array[0] == 0) //first digit cannot be zero
                 {
                     continue;
                 }
                 int constructed_number = 0;
-                for (int i = 0; i < index_array.Length; i++)
+                for (int i = 0; i < array.Length; i++)
                 {
-                    constructed_number += array[index_array[i]] * ((int)(Math.Pow(10, array.Length - 1 - i))); //restores number from array according to permutation in array of indexes.
+                    constructed_number += array[i] * ((int)(Math.Pow(10, array.Length - 1 - i))); //restores number from array
                 }
-                if (constructed_number - number > 0 && constructed_number - number <= dif) //excludes equil and lesser numbers, looking for the nearest greater number.
-                {
-                    dif = constructed_number - number;
+                if (constructed_number - number > 0) //excludes equil and lesser numbers, looking for the nearest greater number.
+                {                    
                     result = constructed_number;
-                }
-                //Console.WriteLine($"{constructed_number}");
-            }            
+                    break; //greatest nearest number found - breaking the cycle
+                }                
+            }
             return result;
         }
-
         /// <summary>
         /// simple method that swaps elements in the array
         /// </summary>
@@ -129,7 +108,7 @@ namespace FindNumber
         /// <param name="j">
         /// array index
         /// </param>
-        public static void swap_elements(ref int[] array, int i, int j)
+        public static void swap_elements(int[] array, int i, int j)
         {
             if (i >= array.Length || j >= array.Length || j < 0 || i < 0)
             {
@@ -141,7 +120,7 @@ namespace FindNumber
             array[j] = temp;
         }
         /// <summary>
-        /// Next Permutation: Narayana Pandita’s algorithm. Designed to work with array of indexes in asc order (as a first permutation).
+        /// Next Permutation: Narayana Pandita’s algorithm.
         /// </summary>
         /// <param name="array">
         /// source array with ref modifier
@@ -149,7 +128,7 @@ namespace FindNumber
         /// <returns>
         /// next lexicographic permutation of source array
         /// </returns>
-        private static bool Generate_set(ref int[] array)
+        private static bool Generate_set(int[] array)
         {
             int array_length = array.Length;
             int cur1 = array_length - 2;
@@ -166,12 +145,12 @@ namespace FindNumber
             {
                 cur2--;
             }
-            swap_elements(ref array, cur1, cur2);
+            swap_elements(array, cur1, cur2);
             int left = cur1 + 1;
             int right = array_length - 1;
             while (left < right)
             {
-                swap_elements(ref array, left++, right--);
+                swap_elements(array, left++, right--);
             }
             return true;
         }
