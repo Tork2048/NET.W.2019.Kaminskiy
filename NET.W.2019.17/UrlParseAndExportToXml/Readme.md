@@ -6,9 +6,10 @@
 например, для текстового файла с URL-адресами:
 
 https://github.com/AnzhelikaKravchuk?tab=repositories
-https://github.com/AnzhelikaKravchuk/2017-2018.MMF.BSU
-https://habrahabr.ru/company/it-grad/blog/341486/ 
 
+https://github.com/AnzhelikaKravchuk/2017-2018.MMF.BSU
+
+https://habrahabr.ru/company/it-grad/blog/341486/
 
 результирующим является XML-документ вида (см. вложенный XML файл) 
 можно использовать любую XML технологию без ограничений.
