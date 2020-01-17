@@ -1,1 +1,0 @@
-Dependency resolver (Ninject config)

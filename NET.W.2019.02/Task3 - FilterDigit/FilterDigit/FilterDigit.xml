@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilterDigit</name>
+    </assembly>
+    <members>
+        <member name="T:FilterDigit.DigitsFilter">
+            <summary>
+            Class designed to filter numbers.
+            </summary>
+        </member>
+        <member name="M:FilterDigit.DigitsFilter.FilterDigit(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Method looks for and removes numbers that contain specific digit.
+            </summary>
+            <param name="list">
+            List of integers we look in.
+            </param>
+            <param name="digit">
+            digit that we look for.
+            </param>
+        </member>
+        <member name="M:FilterDigit.DigitsFilter.NumberExists(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Method checks if list[0..k-1] already contains number list[k]. Required to remove repeating elemens in List.
+            </summary>
+            <param name="list">
+            List of integers.
+            </param>
+            <param name="indexInList">
+            current index in FilterDigit method.
+            </param>
+            <returns>
+            true if element exists, false otherwise.
+            </returns>
+        </member>
+        <member name="M:FilterDigit.DigitsFilter.CheckDigits(System.Int32,System.Int32)">
+            <summary>
+            Simple method that checks if number contains given digit.
+            </summary>
+            <param name="number">
+            number to check in.
+            </param>
+            <param name="digit">
+            digit that we look for.
+            </param>
+            <returns>
+            true if number found, false otherwise.
+            </returns>
+        </member>
+        <member name="T:FilterDigit.Program">
+            <summary>
+            Contains entry point.
+            </summary>
+        </member>
+        <member name="M:FilterDigit.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+        <member name="M:FilterDigit.Program.DisplayList(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Displays List on console.
+            </summary>
+            <param name="list">
+            List of integers to display.
+            </param>
+        </member>
+    </members>
+</doc>

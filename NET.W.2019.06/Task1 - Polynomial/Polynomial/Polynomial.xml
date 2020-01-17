@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Polynomial</name>
+    </assembly>
+    <members>
+        <member name="T:Polynomial.Polynom">
+            <summary>
+            Unchangeable class that represents Polynomial.
+            Polynomial contains only 1 variable.
+            Factors are stored in one-dimensional array in the following way:
+            K[0]x^0+K[1]x^1+...+K[n]x^n.
+            </summary>
+        </member>
+        <member name="M:Polynomial.Polynom.#ctor(System.Double[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Polynomial.Polynom"/> class.
+            </summary>
+            <param name="array">
+            Array of factors.
+            </param>
+        </member>
+        <member name="P:Polynomial.Polynom.ArrayOfFactors">
+            <summary>
+            Gets the array of polynomial factors.
+            </summary>
+            <value>
+            The array of polynomial factors.
+            </value>
+        </member>
+        <member name="M:Polynomial.Polynom.ToString">
+            <summary>
+            Method returns Polynomial in the form of string expression.
+            </summary>
+            <returns>
+            string expression.
+            </returns>
+        </member>
+        <member name="M:Polynomial.Polynom.Equals(System.Object)">
+            <summary>
+            Overriden Equils method.
+            </summary>
+            <param name="obj">
+            Object to compare to.
+            </param>
+            <returns>
+            Bool.
+            </returns>
+        </member>
+        <member name="M:Polynomial.Polynom.GetHashCode">
+            <summary>
+            Overriden GetHashCode.
+            </summary>
+            <returns>
+            integer hashcode.
+            </returns>
+        </member>
+        <member name="M:Polynomial.Polynom.Add(Polynomial.Polynom,Polynomial.Polynom)">
+            <summary>
+            Static method that take 2 polynomials and performs an addition.
+            </summary>
+            <param name="firstPolynom">
+            Polynomial 1.
+            </param>
+            <param name="secondPolynom">
+            Polynomial 2.
+            </param>
+            <returns>
+            Result of addition.
+            </returns>
+        </member>
+        <member name="M:Polynomial.Polynom.GetRidOfZeroes(System.Double[])">
+            <summary>
+            Static method cuts off zero factors from the end of the array.
+            </summary>
+            <param name="array">
+            Array of factors.
+            </param>
+            <returns>
+            Array of factors with no zeroes at the end.
+            </returns>
+        </member>
+        <member name="M:Polynomial.Polynom.Multiply(Polynomial.Polynom,Polynomial.Polynom)">
+            <summary>
+            Static method multiplies 2 polynomials.
+            </summary>
+            <param name="firstPolynom">
+            first polynomial.
+            </param>
+            <param name="secondPolynom">
+            second polynomial.
+            </param>
+            <returns>
+            Result of multiplication.
+            </returns>
+        </member>
+        <member name="M:Polynomial.Polynom.Subtract(Polynomial.Polynom,Polynomial.Polynom)">
+            <summary>
+            Subtraction.
+            </summary>
+            <param name="firstPolynom">
+            first polynomial.
+            </param>
+            <param name="secondPolynom">
+            second polynomial.
+            </param>
+            <returns>
+            Result of subtraction.
+            </returns>
+        </member>
+        <member name="T:Polynomial.Program">
+            <summary>
+            Contains entry point.
+            </summary>
+        </member>
+        <member name="M:Polynomial.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+    </members>
+</doc>

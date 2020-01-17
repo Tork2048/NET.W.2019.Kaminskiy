@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SortJaggedArray.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:SortJaggedArray.Tests.TestData">
+            <summary>
+            Test data clas.
+            </summary>
+        </member>
+        <member name="M:SortJaggedArray.Tests.TestData.#ctor(System.Int32[][],System.Int32[][],SortJaggedArray.SortClass.SortOrderOption,SortJaggedArray.SortClass.SortOption)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SortJaggedArray.Tests.TestData"/> class.
+            </summary>
+            <param name="source">
+            Source array.
+            </param>
+            <param name="result">
+            Expected result array.
+            </param>
+            <param name="orderoption">
+            Order option.
+            </param>
+            <param name="option">
+            Sort criteria.
+            </param>
+        </member>
+        <member name="P:SortJaggedArray.Tests.TestData.SourceArray">
+            <summary>
+            Gets or sets source array.
+            </summary>
+            <value>
+            Source array.
+            </value>
+        </member>
+        <member name="P:SortJaggedArray.Tests.TestData.ExpectedArray">
+            <summary>
+            Gets or sets expected result array.
+            </summary>
+            <value>
+            Expected result array.
+            </value>
+        </member>
+        <member name="P:SortJaggedArray.Tests.TestData.OrderOption">
+            <summary>
+            Gets or sets order option enumeration.
+            </summary>
+            <value>
+            Order option enumeration.
+            </value>
+        </member>
+        <member name="P:SortJaggedArray.Tests.TestData.Option">
+            <summary>
+            Gets or sets sort criteria enumeration.
+            </summary>
+            <value>
+            Sort criteria enumeration.
+            </value>
+        </member>
+        <member name="M:SortJaggedArray.Tests.Tests.TestSortBySumInRow(SortJaggedArray.Tests.TestData)">
+            <summary>
+            Test sort by sum in a row.
+            </summary>
+            <param name="testdata">
+            Test data class instance.
+            </param>
+        </member>
+        <member name="M:SortJaggedArray.Tests.Tests.TestSortByMinInRow(SortJaggedArray.Tests.TestData)">
+            <summary>
+            Test sort by min element in a row.
+            </summary>
+            <param name="testdata">
+            Test data class instance.
+            </param>
+        </member>
+        <member name="M:SortJaggedArray.Tests.Tests.TestSortByMaxInRow(SortJaggedArray.Tests.TestData)">
+            <summary>
+            Test sort by max element in a row.
+            </summary>
+            <param name="testdata">
+            Test data class instance.
+            </param>
+        </member>
+    </members>
+</doc>

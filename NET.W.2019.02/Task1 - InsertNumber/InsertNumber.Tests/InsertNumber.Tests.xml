@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InsertNumber.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:InsertBits.Tests.Tests">
+            <summary>
+            Test class.
+            </summary>
+        </member>
+        <member name="M:InsertBits.Tests.Tests.ValuesTest(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Tests InsertNumber method with values.
+            </summary>
+            <param name="val1">
+            Value 1.
+            </param>
+            <param name="val2">
+            Value 2.
+            </param>
+            <param name="i">
+            Lower bit position.
+            </param>
+            <param name="j">
+            Higher bit position.
+            </param>
+            <returns>
+            Result number.
+            </returns>
+        </member>
+        <member name="M:InsertBits.Tests.Tests.ExceptionTest(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Tests exception thrown by InsertNumber method.
+            </summary>
+            <param name="val1">
+            Value 1.
+            </param>
+            <param name="val2">
+            Value 2.
+            </param>
+            <param name="i">
+            Lower bit position.
+            </param>
+            <param name="j">
+            Higher bit position.
+            </param>
+        </member>
+    </members>
+</doc>

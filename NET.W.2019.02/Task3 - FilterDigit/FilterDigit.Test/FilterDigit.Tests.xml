@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilterDigit.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:FilterDigit.Tests.TestData">
+            <summary>
+            Test data class.
+            </summary>
+        </member>
+        <member name="P:FilterDigit.Tests.TestData.Source">
+            <summary>
+            Gets or sets source list of numbers.
+            </summary>
+            <value>
+            Source list of numbers.
+            </value>
+        </member>
+        <member name="P:FilterDigit.Tests.TestData.ExpectedResult">
+            <summary>
+            Gets or sets result list of numbers.
+            </summary>
+            <value>
+            Result list of numbers.
+            </value>
+        </member>
+        <member name="P:FilterDigit.Tests.TestData.Digit">
+            <summary>
+            Gets or sets digit to filter.
+            </summary>
+            <value>
+            Digit to filter.
+            </value>
+        </member>
+        <member name="T:FilterDigit.Tests.Tests">
+            <summary>
+            Test class.
+            </summary>
+        </member>
+        <member name="M:FilterDigit.Tests.Tests.ListTest(FilterDigit.Tests.TestData)">
+            <summary>
+            Mthod to test FilterDigitMethod.
+            </summary>
+            <param name="content">
+            Instance of test data class.
+            </param>
+        </member>
+        <member name="M:FilterDigit.Tests.Tests.ExceptionTest(System.Collections.Generic.List{System.Int32},System.Int32)">
+            <summary>
+            Method tests exception thrown by FilterDigit.
+            </summary>
+            <param name="list">
+            List of numbers to operate.
+            </param>
+            <param name="digit">
+            Digit to filter.
+            </param>
+        </member>
+    </members>
+</doc>

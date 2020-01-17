@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortJaggedArray", "SortJaggedArray.csproj", "{1AD124C3-EF51-4D4C-8DFD-33F0D5DEDAB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortJaggedArray.Tests", "..\SortJaggedArray.Tests\SortJaggedArray.Tests.csproj", "{AD593250-FCBA-456A-B6FA-7B3D45B6DF37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AD124C3-EF51-4D4C-8DFD-33F0D5DEDAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD124C3-EF51-4D4C-8DFD-33F0D5DEDAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD124C3-EF51-4D4C-8DFD-33F0D5DEDAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD124C3-EF51-4D4C-8DFD-33F0D5DEDAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD593250-FCBA-456A-B6FA-7B3D45B6DF37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD593250-FCBA-456A-B6FA-7B3D45B6DF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD593250-FCBA-456A-B6FA-7B3D45B6DF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD593250-FCBA-456A-B6FA-7B3D45B6DF37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33987093-AFE8-47C4-9E0D-2CAFF7B69F58}
+	EndGlobalSection
+EndGlobal

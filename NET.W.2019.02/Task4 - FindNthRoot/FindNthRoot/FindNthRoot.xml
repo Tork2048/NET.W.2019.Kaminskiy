@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FindNthRoot</name>
+    </assembly>
+    <members>
+        <member name="T:FindNthRoot.NthRoot">
+            <summary>
+            Designed to search Nth root.
+            </summary>
+        </member>
+        <member name="M:FindNthRoot.NthRoot.FindNthRoot(System.Double,System.Double,System.Double)">
+            <summary>
+            Calculates Nth root using Newton's method with given precision.
+            </summary>
+            <param name="number">
+            Number to operate with.
+            </param>
+            <param name="root">
+            Given root index.
+            </param>
+            <param name="precision">
+            Given precision.
+            </param>
+            <returns>
+            Nth root from number with given precision.
+            </returns>
+        </member>
+        <member name="T:FindNthRoot.Program">
+            <summary>
+            Contains entry point.
+            </summary>
+        </member>
+        <member name="M:FindNthRoot.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+    </members>
+</doc>

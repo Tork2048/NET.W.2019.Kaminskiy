@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SortJaggedArray</name>
+    </assembly>
+    <members>
+        <member name="T:SortJaggedArray.Program">
+            <summary>
+            Contains Entry point.
+            </summary>
+        </member>
+        <member name="M:SortJaggedArray.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+        <member name="M:SortJaggedArray.Program.DisplayJaggedArray(System.Int32[][])">
+            <summary>
+            Method displays jagged array on console.
+            </summary>
+            <param name="array">
+            Array to display.
+            </param>
+        </member>
+        <member name="T:SortJaggedArray.SortClass">
+            <summary>
+            Designed to sort jagged arrays.
+            </summary>
+        </member>
+        <member name="T:SortJaggedArray.SortClass.SortOrderOption">
+            <summary>
+            Sort order.
+            </summary>
+        </member>
+        <member name="F:SortJaggedArray.SortClass.SortOrderOption.Ascend">
+            <summary>
+            Order by ascending.
+            </summary>
+        </member>
+        <member name="F:SortJaggedArray.SortClass.SortOrderOption.Descend">
+            <summary>
+            Order by descending.
+            </summary>
+        </member>
+        <member name="T:SortJaggedArray.SortClass.SortOption">
+            <summary>
+            Sort option.
+            </summary>
+        </member>
+        <member name="F:SortJaggedArray.SortClass.SortOption.ByMaxInRow">
+            <summary>
+            Order by maximum value in a row.
+            </summary>
+        </member>
+        <member name="F:SortJaggedArray.SortClass.SortOption.ByMinInRow">
+            <summary>
+            Order by minum value in a row.
+            </summary>
+        </member>
+        <member name="F:SortJaggedArray.SortClass.SortOption.ByRowSum">
+            <summary>
+            Order by sum in a row.
+            </summary>
+        </member>
+        <member name="M:SortJaggedArray.SortClass.JuggedArraySort(System.Int32[][],SortJaggedArray.SortClass.SortOption,SortJaggedArray.SortClass.SortOrderOption)">
+            <summary>
+            Sorts jagged array.
+            </summary>
+            <param name="source_array">
+            Array to sort.
+            </param>
+            <param name="sortoption">
+            Sort option from enumeration.
+            </param>
+            <param name="orderoption">
+            Sort order from enumeration.
+            </param>
+            <returns>
+            Sorted array.
+            </returns>
+        </member>
+        <member name="M:SortJaggedArray.SortClass.GetIndexesSum(System.Int32[][])">
+            <summary>
+            Gets two-dimensional array with 2 elements in each row.
+            1 - index in source array.
+            2 - sum of elements in that row.
+            </summary>
+            <param name="source_array">
+            Source array.
+            </param>
+            <returns>
+            Array of indexes - sum accordingly.
+            </returns>
+        </member>
+        <member name="M:SortJaggedArray.SortClass.GetIndexesMax(System.Int32[][])">
+            <summary>
+            Gets two-dimensional array with 2 elements in each row.
+            1 - index in source array.
+            2 - max element in that row.
+            </summary>
+            <param name="source_array">
+            Source array.
+            </param>
+            <returns>
+            Array of indexes - max element accordingly.
+            </returns>
+        </member>
+        <member name="M:SortJaggedArray.SortClass.GetIndexesMin(System.Int32[][])">
+            <summary>
+            Gets two-dimensional array with 2 elements in each row.
+            1 - index in source array.
+            2 - min element in that row.
+            </summary>
+            <param name="source_array">
+            Source array.
+            </param>
+            <returns>
+            Array of indexes - min element accordingly.
+            </returns>
+        </member>
+        <member name="M:SortJaggedArray.SortClass.BubbleSort(System.Int32[][],SortJaggedArray.SortClass.SortOrderOption)">
+            <summary>
+            Sorts twodimensional arrays of indexes by sort criteria.
+            Uses results of following methods.
+            <see cref="M:SortJaggedArray.SortClass.GetIndexesMax(System.Int32[][])"/>
+            <see cref="M:SortJaggedArray.SortClass.GetIndexesMin(System.Int32[][])"/>
+            <see cref="M:SortJaggedArray.SortClass.GetIndexesSum(System.Int32[][])"/>.
+            </summary>
+            <param name="array">
+            Array to sort.
+            </param>
+            <param name="option">
+            Sort criteria.
+            </param>
+        </member>
+    </members>
+</doc>

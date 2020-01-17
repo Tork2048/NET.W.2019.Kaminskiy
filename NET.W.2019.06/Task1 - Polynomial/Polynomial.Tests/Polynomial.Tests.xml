@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Polynomial.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:Polynomial.Tests.TestData">
+            <summary>
+            Test data class.
+            </summary>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.FirstPolynom">
+            <summary>
+            Gets or sets first polynomial.
+            </summary>
+            <value>
+            First polynomial.
+            </value>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.SecondPolynom">
+            <summary>
+            Gets or sets second polynomial.
+            </summary>
+            <value>
+            Second polynomial.
+            </value>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.ExpectedAddResult">
+            <summary>
+            Gets or sets excpected addition result.
+            </summary>
+            <value>
+            Excpected addition result.
+            </value>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.ExpectedSubtractResult">
+            <summary>
+            Gets or sets expected subtraction result.
+            </summary>
+            <value>
+            Expected subtraction result.
+            </value>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.ExpectedMultiplyResult">
+            <summary>
+            Gets or sets expected result.
+            </summary>
+            <value>
+            Expected result.
+            </value>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.ExpectedEqualResult">
+            <summary>
+            Gets or sets a value indicating whether polynomials are equil.
+            </summary>
+            <value>
+            A value indicating whether polynomials are equil.
+            </value>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.ExpectedHashCodeResult">
+            <summary>
+            Gets or sets expected hashcode.
+            </summary>
+            <value>
+            Expected hashcode.
+            </value>
+        </member>
+        <member name="P:Polynomial.Tests.TestData.ExpectedToStringResult">
+            <summary>
+            Gets or sets expected ToString result.
+            </summary>
+            <value>
+            Expected ToString result.
+            </value>
+        </member>
+        <member name="T:Polynomial.Tests.Tests">
+            <summary>
+            Test class.
+            </summary>
+        </member>
+        <member name="M:Polynomial.Tests.Tests.TestAdd(Polynomial.Tests.TestData)">
+            <summary>
+            Test addition.
+            </summary>
+            <param name="data">
+            Instance of test data class.
+            </param>
+        </member>
+        <member name="M:Polynomial.Tests.Tests.TestSubtract(Polynomial.Tests.TestData)">
+            <summary>
+            Test subtraction.
+            </summary>
+            <param name="data">
+            Instance of test data class.
+            </param>
+        </member>
+        <member name="M:Polynomial.Tests.Tests.TestMultiply(Polynomial.Tests.TestData)">
+            <summary>
+            Test multiplication.
+            </summary>
+            <param name="data">
+            Instance of test data class.
+            </param>
+        </member>
+        <member name="M:Polynomial.Tests.Tests.TestEqual(Polynomial.Tests.TestData)">
+            <summary>
+            Test equality.
+            </summary>
+            <param name="data">
+            Instance of test data class.
+            </param>
+        </member>
+        <member name="M:Polynomial.Tests.Tests.TestEqualOperator(Polynomial.Tests.TestData)">
+            <summary>
+            Test == operator.
+            </summary>
+            <param name="data">
+            Instance of test data class.
+            </param>
+        </member>
+        <member name="M:Polynomial.Tests.Tests.TestToString(Polynomial.Tests.TestData)">
+            <summary>
+            Test ToString method.
+            </summary>
+            <param name="data">
+            Instance of test data class.
+            </param>
+        </member>
+        <member name="M:Polynomial.Tests.Tests.TestGetHashCode(Polynomial.Tests.TestData)">
+            <summary>
+            Test GetHashCode method.
+            </summary>
+            <param name="data">
+            Instance of test data class.
+            </param>
+        </member>
+    </members>
+</doc>

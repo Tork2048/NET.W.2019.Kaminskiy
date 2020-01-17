@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InsertNumber</name>
+    </assembly>
+    <members>
+        <member name="T:InsertNumber.Inserter">
+            <summary>
+            Contains method that inserts number into other number's bit structure.
+            </summary>
+        </member>
+        <member name="M:InsertNumber.Inserter.InsertNumber(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Method inserts y value bits to i..j bit range of the x value.
+            </summary>
+            <param name="x">
+            First value, int.
+            </param>
+            <param name="y">
+            Second value, int.
+            </param>
+            <param name="i">
+            lower bit position.
+            </param>
+            <param name="j">
+            higher bit position (j>=i).
+            </param>
+            <returns>
+            modified x.
+            </returns>
+        </member>
+        <member name="T:InsertNumber.Program">
+            <summary>
+            Contains entry point.
+            </summary>
+        </member>
+        <member name="M:InsertNumber.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+    </members>
+</doc>

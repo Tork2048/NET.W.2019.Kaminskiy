@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GCD.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:GCD.Tests.Tests">
+            <summary>
+            Test class for unit testing.
+            </summary>
+        </member>
+        <member name="M:GCD.Tests.Tests.TestGCDCalculation(GCD.GCDCalculation.AlgOption,System.Int32[])">
+            <summary>
+            GCD calculation method testing.
+            </summary>
+            <param name="option">
+            Algorithm option.
+            </param>
+            <param name="integers">
+            Numbers to calculate GCD for.
+            </param>
+            <returns>
+            GCD.
+            </returns>
+        </member>
+        <member name="M:GCD.Tests.Tests.GCDExceptionTest(GCD.GCDCalculation.AlgOption,System.Int32[])">
+            <summary>
+            GCD exception test.
+            </summary>
+            <param name="option">
+            Algorithm option.
+            </param>
+            <param name="integers">
+            Numbers to calculate GCD for.
+            </param>
+        </member>
+    </members>
+</doc>

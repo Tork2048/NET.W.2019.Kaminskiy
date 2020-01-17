@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FindNthRoot.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:FindRoot.Tests.Tests">
+            <summary>
+            Test class.
+            </summary>
+        </member>
+        <member name="M:FindRoot.Tests.Tests.ValuesTest(System.Double,System.Double,System.Double)">
+            <summary>
+            Tests FindNthRoot method.
+            </summary>
+            <param name="number">
+            Number.
+            </param>
+            <param name="n">
+            root.
+            </param>
+            <param name="precision">
+            Given precision.
+            </param>
+            <returns>
+            Nth root from A.
+            </returns>
+        </member>
+    </members>
+</doc>

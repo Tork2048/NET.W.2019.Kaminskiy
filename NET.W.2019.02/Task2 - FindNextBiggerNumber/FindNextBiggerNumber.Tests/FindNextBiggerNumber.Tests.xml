@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FindNextBiggerNumber.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:FindNumber.Tests.Tests">
+            <summary>
+            Test class.
+            </summary>
+        </member>
+        <member name="M:FindNumber.Tests.Tests.ValuesTest(System.Int32)">
+            <summary>
+            Test FindNextBiggerNumberMethod.
+            </summary>
+            <param name="number">
+            Initial number.
+            </param>
+            <returns>
+            Next bigger number that consists of digits from initial number.
+            </returns>
+        </member>
+    </members>
+</doc>
