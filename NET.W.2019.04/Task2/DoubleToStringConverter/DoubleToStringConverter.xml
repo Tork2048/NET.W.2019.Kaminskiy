@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DoubleToStringConverter</name>
+    </assembly>
+    <members>
+        <member name="T:DoubleToString.DoubleExtension">
+            <summary>
+            class that proves extension method for double type that converts 8 bytes of double value into string.
+            </summary>
+        </member>
+        <member name="M:DoubleToString.DoubleExtension.ConvertToString(System.Double)">
+            <summary>
+            Double Extension method that converts 8 bytes of double type into a string.
+            </summary>
+            <param name="value">
+            double number.
+            </param>
+            <returns>
+            string that contains bits of the double value.
+            </returns>
+        </member>
+        <member name="T:DoubleToString.Program">
+            <summary>
+            Contains entry point.
+            </summary>
+        </member>
+        <member name="M:DoubleToString.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GCD</name>
+    </assembly>
+    <members>
+        <member name="T:GCD.GCDCalculation">
+            <summary>
+            Class contains methods that calculate Greates common divisor for n signed integers.
+            </summary>
+        </member>
+        <member name="T:GCD.GCDCalculation.AlgOption">
+            <summary>
+            Enumeration of available GCD algorithms.
+            </summary>
+        </member>
+        <member name="F:GCD.GCDCalculation.AlgOption.Euclidean">
+            <summary>
+            Euclidean algorithm.
+            </summary>
+        </member>
+        <member name="F:GCD.GCDCalculation.AlgOption.Stein">
+            <summary>
+            Stein Algorithm (binary).
+            </summary>
+        </member>
+        <member name="M:GCD.GCDCalculation.GetGCD(GCD.GCDCalculation.AlgOption,System.Int32[])">
+            <summary>
+            Method that calculates GCD for any number of integer values.
+            </summary>
+            <param name="option">
+            defines calculation algorithm(Euclidean, Stein).
+            </param>
+            <param name="integers">
+            params int[].
+            </param>
+            <returns>
+            GCD for params int[].
+            </returns>
+        </member>
+        <member name="M:GCD.GCDCalculation.GetGCD(GCD.GCDCalculation.AlgOption,System.Int32@,System.Int32[])">
+            <summary>
+            Overloaded version of method designed to calculate runtime for given algorithm.
+            </summary>
+            <param name="option">
+            defines calculation algorithm(Euclidean, Stein).
+            </param>
+            <param name="time">
+            returns runtime(out).
+            </param>
+            <param name="integers">
+            params int[].
+            </param>
+            <returns>
+            GCD.
+            </returns>
+        </member>
+        <member name="M:GCD.GCDCalculation.GetGCDForTwo(System.Int32,System.Int32)">
+            <summary>
+            Method calculates GCD for 2 integers with Euclidean algorithm.
+            </summary>
+            <param name="a">
+            first number.
+            </param>
+            <param name="b">
+            second number.
+            </param>
+            <returns>
+            GCD for 2 numbers.
+            </returns>
+        </member>
+        <member name="M:GCD.GCDCalculation.GetGCDForTwoBinary(System.Int32,System.Int32)">
+            <summary>
+            Method calculates GCD for 2 integers with Stein algorithm(Binary).
+            </summary>
+            <param name="a">
+            First number.
+            </param>
+            <param name="b">
+            Second number.
+            </param>
+            <returns>
+            GCD for 2 numbers.
+            </returns>
+        </member>
+        <member name="T:GCD.Program">
+            <summary>
+            Contains entry point.
+            </summary>
+        </member>
+        <member name="M:GCD.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+    </members>
+</doc>
