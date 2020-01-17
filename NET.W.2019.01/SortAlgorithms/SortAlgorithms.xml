@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SortAlgorithms</name>
+    </assembly>
+    <members>
+        <member name="T:SortAlgorithms.Program">
+            <summary>
+            Class that contains entry point.
+            </summary>
+        </member>
+        <member name="M:SortAlgorithms.Program.Main">
+            <summary>
+            Entry point.
+            </summary>
+        </member>
+        <member name="M:SortAlgorithms.Program.Display(System.Int32[])">
+            <summary>
+            Outputs elements of any array of integers to console.
+            </summary>
+            <param name="array">
+            Source array to display.
+            </param>
+        </member>
+        <member name="T:SortAlgorithms.SortMachine">
+            <summary>
+            Static class. Contains implementations of Quick, Merge and Bubble sort methods. Also can display array on console.
+            </summary>
+        </member>
+        <member name="T:SortAlgorithms.SortMachine.Method">
+            <summary>
+             Will be used as an option param for Sort method.
+            </summary>
+        </member>
+        <member name="F:SortAlgorithms.SortMachine.Method.Quick">
+            <summary>
+            Quick sort method.
+            </summary>
+        </member>
+        <member name="F:SortAlgorithms.SortMachine.Method.Merge">
+            <summary>
+            Merge sort method.
+            </summary>
+        </member>
+        <member name="F:SortAlgorithms.SortMachine.Method.Bubble">
+            <summary>
+            Bubble sort method.
+            </summary>
+        </member>
+        <member name="M:SortAlgorithms.SortMachine.Sort(System.Int32[],SortAlgorithms.SortMachine.Method)">
+            <summary>
+            Main sort method that agregates all sort methods.
+            </summary>
+            <param name="sourceArray">
+            target array to sort.
+            </param>
+            <param name="method">
+            enum variable that defines sort method.
+            </param>
+            <returns>
+            Sorted array.
+            </returns>
+        </member>
+        <member name="M:SortAlgorithms.SortMachine.SelfTest(System.Int32,System.Int32,SortAlgorithms.SortMachine.Method)">
+            <summary>
+            Self test method. Tests Sort methods on randomly generated arrays and compares results with reference sort method (Bubble).
+            </summary>
+            <param name="testAmount">
+            Number of tests (new array is generated with each test).
+            </param>
+            <param name="arrayCapacity">
+            number of elements in the array.
+            </param>
+            <param name="method">
+            sort method that will be tested.
+            </param>
+        </member>
+        <member name="M:SortAlgorithms.SortMachine.ArrayRandomizer(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Array generator (random).
+            </summary>
+            <param name="capacity">
+            number of elements in generated array.
+            </param>
+            <param name="begin">
+            the least number in random range.
+            </param>
+            <param name="end">
+            the greatest number in random range.
+            </param>
+            <returns>
+            Randomly generated array of integers.
+            </returns>
+        </member>
+        <member name="M:SortAlgorithms.SortMachine.QuickSort(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            Quick sort method implementation. Private, not meant for direct use.
+            </summary>
+            <param name="array">
+            Target array for sorting. Argument is used with ref modifier - required for recursion to work. Algorithm works directly with source array.
+            </param>
+            <param name="begin">
+            Defines the first element of array that will be sorted.
+            </param>
+            <param name="end">
+            Defines the last element of array that will be sorted.
+            </param>
+        </member>
+        <member name="M:SortAlgorithms.SortMachine.MergeSort(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            Merge sort method implementation. Private, not meant for direct use.
+            </summary>
+            <param name="array">
+            Target array for sorting. Argument is used with ref modifier - required for recursion to work. Algorithm works directly with source array.
+            </param>
+            <param name="begin">
+            Defines the first element of array that will be sorted.
+            </param>
+            <param name="end">
+            Defines the last element of array that will be sorted.
+            </param>
+        </member>
+        <member name="M:SortAlgorithms.SortMachine.Piv_Index(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            Designed to search for pivot element that is equilly distant from min and max elements in the array.
+            Proves to be non-effective method. Mid element of the array will be used instead.
+            </summary>
+            <param name="array">
+            Target array.
+            </param>
+            <param name="begin">
+            first element index in search range.
+            </param>
+            <param name="end">
+            last element index in search range.
+            </param>
+            <returns>
+            Index of pivot element.
+            </returns>
+        </member>
+        <member name="M:SortAlgorithms.SortMachine.Bubble_Sort(System.Int32[])">
+            <summary>
+            Bubble sort method. Nothing fancy but reliable. Will be used as a reference for testing purposes.
+            </summary>
+            <param name="array">
+            Target array to sort.
+            </param>
+            <returns>
+            Sorted array.
+            </returns>
+        </member>
+    </members>
+</doc>
